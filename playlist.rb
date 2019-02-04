@@ -20,7 +20,8 @@ module RubyPlayer
     def print_playlist(position)
       @songs.each_with_index do |each_song, index|
         if index.eql? position
-          puts index.to_s.concat("- #{each_song.data_song}").center(200).colorize(:light_blue).colorize(:background => :white)
+          full_data_song = index.to_s.concat("- #{each_song.data_song}")
+          puts full_data_song.center(200).colorize(color: :light_blue, background: :white)
         else
           puts index.to_s.concat("- #{each_song.data_song}").center(200)
         end
@@ -33,7 +34,7 @@ module RubyPlayer
     end
 
     def stopping_song
-      songs[@playing].stop_song unless @playing.nil? 
+      songs[@playing].stop_song unless @playing.nil?
       @playing = nil unless @playing.nil?
     end
   end
