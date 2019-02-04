@@ -2,8 +2,8 @@ require 'byebug'
 require 'colorize'
 require 'rubocop'
 require_relative './playlist.rb'
-load 'song.rb'
-load 'ruby_player.rb'
+require_relative './song.rb'
+require_relative './ruby_player.rb'
 
 if ARGV.length != 1
   puts 'We need exactly a arguments(The playlist path)'

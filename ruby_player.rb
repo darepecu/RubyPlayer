@@ -9,7 +9,7 @@ class AppRubyPlayer
   attr_reader :playlist
 
   def initialize(playlist)
-    @playlist = playlist 
+    @playlist = playlist
   end
 
   def header
