@@ -3,10 +3,10 @@ Version 0.3.2-1 (2012/03/25). Written and copyrights by Joe Drew,
 now maintained by Nanakos Chrysostomos and others.
 Uses code from various people. See 'README' for more!
 THIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY! USE AT YOUR OWN RISK!
-Title	: Bohemian Rapsody               Artist : Queen                         
+Title	: Sombody To Love                Artist : Queen                         
 Album	: Greatest Hits                  Year	 :                               
 Comment :                                Genre : Rock                          
 
 Directory: ./music/Queen
-Playing MPEG stream from Bohemian Rapsody.mp3 ...
-MPEG 1.0 layer III, 128 kbit/s, 44100 Hz stereo
+Playing MPEG stream from Sombody To Love.mp3 ...
+MPEG 1.0 layer III, 128 kbit/s, 44100 Hz joint-stereo

@@ -18,12 +18,13 @@ home = AppRubyPlayer.new(playlist)
 home.clear_page
 home.associate_songs
 home.renderize_all_page(@position)
+
 input_client = STDIN.gets.chomp.upcase
 home.clear_page
 
 thread_input = Thread.new {
   loop do
-    break if input_client.eql? 'Q'
+    break if input_client.upcase.eql? 'Q'
 
     puts 'Last command: ' + input_client
     case input_client.upcase
