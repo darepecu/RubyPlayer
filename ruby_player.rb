@@ -31,7 +31,7 @@ class AppRubyPlayer
 
   def footer
     puts @asterisk_symbol_line.colorize(:blue)
-    puts 'N - Next_Song  A - Anterior  P - Play  S -Stop  Q - Quit'.center(200)
+    puts 'N - Next  A - Anterior  P - Play  S -Stop  Q - Quit'.center(200)
     puts @asterisk_symbol_line.colorize(:blue)
   end
 

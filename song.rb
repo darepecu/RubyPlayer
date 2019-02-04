@@ -1,19 +1,21 @@
 module RubyPlayer
   # Clase ue representa el objero cancion
   class Song
+
     def initialize(path, name_song, artist)
       @path = path
       @name_song = name_song
       @artist = artist
-      @thread_song = nil
       @pid = nil
     end
 
-    def play_song
+    def play_song(monitoring)
       puts "Reproducionedo -> #{@name_song}"
-      @thread_song = Thread.new {
+      Thread.new do
         @pid = Process.spawn('mpg321', @path, [:out, :err] => './log')
-      }
+        Process.wait(@pid)
+        monitoring.call
+      end
     end
 
     def stop_song

@@ -45,7 +45,13 @@ thread_input = Thread.new {
         @position -= 1
       end
     when 'P'
-      home.playlist.playing_song(@position)
+      monitoring = lambda do
+        home.clear_page
+        home.renderize_all_page(@position + 1)
+        home.playlist.playing_song(@position + 1, monitoring)
+        @position += 1
+      end
+      home.playlist.playing_song(@position, monitoring)
     when 'S'
       home.playlist.stopping_song
     else

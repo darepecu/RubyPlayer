@@ -28,8 +28,8 @@ module RubyPlayer
       end
     end
 
-    def playing_song(number_song)
-      songs[number_song].play_song
+    def playing_song(number_song, monitoring)
+      songs[number_song].play_song(monitoring)
       @playing = number_song
     end
 
