@@ -1,0 +1,36 @@
+pid = Process.spawn('') #ejecutar musica 
+Process.spawn('mpg321' 'Argumento', [:out, :err] => '/dev/null') #Ejecutar musica sin logs 
+
+#Crear hilos en Ruby uno para el reproductor y otra para esperar los comandos 
+Thead.new do 
+    puts 'hello'
+end 
+
+# Process.wait(pid)
+# $! tiene el codigo de salida del reproductos 
+# si es 0 ok
+# si es =!0 paila 
+
+player_proc = proc do |song|
+    puts song
+end 
+
+song = 'hello'
+
+Thead.new(song, $player_proc)
+
+
+lamba para comunciacion mpg321 
+
+
+#pid = Process.spawn('mpg321', './music/Metallica/Metallica - Enter Sandman.mp3', [:out, :err] => './log')
+
+# puts '============================= RubyPlayer ============================='
+# puts '----------------------------------------------------------------------'
+# puts '                            Play List                                 '
+# puts '----------------------------------------------------------------------'
+# puts '-------------- Artist --------------------- Song ---------------------'
+# puts '----------------------------------------------------------------------'
+
+1. ejecutar mpg321 desde ruby 
+2. 
